@@ -4,12 +4,18 @@ const { getAge, getUUID } = require('./plugins');
 // const {getUserById} = require('./js-foundation/03-callbacks');
 // const { getUserById } = require('./js-foundation/04-arrow');
 // const { buildMakePerson } = require('./js-foundation/05-factory');
-const getPokemonById = require('./js-foundation/06-promises');
+// const getPokemonById = require('./js-foundation/06-promises');
 
-getPokemonById(6)
-    .then( (pokemon) => console.log({pokemon}))
-    .catch( (err) => console.log('Por favor intente denuevo'))
-    .finally( () => console.log('Finalmente'));
+const { buildLogger } = require('./plugins');
+
+const logger = buildLogger('app.js');
+
+logger.log('Hola Mundo');
+logger.error('Esto es algo malo');
+// getPokemonById(6)
+//     .then( (pokemon) => console.log({pokemon}))
+//     .catch( (err) => console.log('Por favor intente denuevo'))
+//     .finally( () => console.log('Finalmente'));
 
 // console.log(templateExports);
 
