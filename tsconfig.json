@@ -1,4 +1,6 @@
 {
+  "include": ["src/**/*"], //Solo estos archivos son considerados para el typescript compiler
+  "exclude": ["node_modules", "**/*.spec.ts","**/*.test.ts"], //Excluir de la transpilación los archivos de test y los modulos de node.,
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
